@@ -168,3 +168,5 @@ while running:
     pygame.display.flip()  # Update the full display
 
 pygame.quit()
+
+print("hi")
