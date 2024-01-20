@@ -18,7 +18,7 @@ def create_schedule_with_chatgpt(tasks, api_key):
         'Authorization': f'Bearer {api_key}'
     }
 
-    messages = [{'role': 'system', 'content': 'You are helping the user create a daily schedule given the task and number of hours the task takes. The output should be the schedule.'}]
+    messages = [{'role': 'system', 'content': 'You are helping the user create a daily schedule given the task and number of hours the task takes. The output should be the schedule. Make sure sleep is at night.'}]
     
     for task, hours in tasks:
         task_message = f"I have a task named '{task}' that will take {hours} hours."
@@ -44,7 +44,7 @@ def create_schedule_with_chatgpt(tasks, api_key):
 
 def main():
     tasks = get_user_tasks()
-    api_key = ''
+    api_key = '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'
 
     schedule = create_schedule_with_chatgpt(tasks, api_key)
 
