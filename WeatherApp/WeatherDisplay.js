@@ -4,7 +4,8 @@ import { View, Text, StyleSheet } from "react-native";
 const WeatherDisplay = ({ data }) => {
   return (
     <View style={styles.card}>
-      <Text style={styles.tempText}>Temperature: {data.temp}</Text>
+      <Text style={styles.locationText}>Location: {data.location}</Text>
+      <Text style={styles.temperatureText}>Temperature: {data.temp} F</Text>
       <Text style={styles.conditionText}>Condition: {data.condition}</Text>
     </View>
   );
@@ -21,12 +22,15 @@ const styles = StyleSheet.create({
     shadowRadius: 2,
     elevation: 5,
   },
-  tempText: {
+  locationText: {
     fontSize: 20,
     fontWeight: "bold",
     marginBottom: 10,
   },
   conditionText: {
+    fontSize: 18,
+  },
+  temperatureText: {
     fontSize: 18,
   },
 });
