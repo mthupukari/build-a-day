@@ -5,7 +5,6 @@ import WeatherDisplay from "./WeatherDisplay";
 require("dotenv").config();
 
 const App = () => {
-  const [location, setLocation] = useState("");
   const [weatherData, setWeatherData] = useState(null);
 
   function toTitleCase(str) {
@@ -17,8 +16,6 @@ const App = () => {
   }
 
   const fetchWeather = async (loc) => {
-    // Fetch weather data from an API
-    // For now, it's just a placeholder
     const geo_api = process.env.GEOCODE_KEY;
     const owm_api = process.env.OPENWEATHERAPP_KEY;
 
